@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox Status Checker</title>
+</head>
+<body>
+
+<label>
+  <input type="checkbox" id="checkbox"> Checkbox
+</label>
+<p id="status"></p>
+
+<script>
+  const checkbox = document.getElementById('checkbox');
+  const statusElement = document.getElementById('status');
+
+  checkbox.addEventListener('change', function() {
+    if (this.checked) {
+      statusElement.textContent = 'Checkbox is checked.';
+    } else {
+      statusElement.textContent = 'Checkbox is unchecked.';
+    }
+  });
+
+  if (checkbox.checked) {
+    statusElement.textContent = 'Checkbox is checked.';
+  } else {
+    statusElement.textContent = 'Checkbox is unchecked.';
+  }
+</script>
+
+</body>
+</html>
